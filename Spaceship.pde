@@ -10,9 +10,19 @@ class Spaceship extends Floater
     	yCorners[1] = 0;
     	xCorners[2] = -8;
     	yCorners[2] = 8;
+        myColor = (255);
+        myCenterX = 250;
+        myCenterY = 250;
+        myDirectionX = 0;
+        myDirectionY = 0;
+        myPointDirection = 0;
     }
-    public void teleport() {
-
+    public void hyperspace() {
+        myDirectionX = 0;
+        myDirectionY = 0;
+        myPointDirection = 0;
+        myCenterX = Math.random() * 500;
+        myCenterY = Math.random() * 500;
     }
     
 }
