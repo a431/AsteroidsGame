@@ -24,5 +24,4 @@ class Spaceship extends Floater
         myCenterX = Math.random() * 500;
         myCenterY = Math.random() * 500;
     }
-    
 }

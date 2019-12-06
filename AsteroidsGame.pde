@@ -1,10 +1,14 @@
 Spaceship bob = new Spaceship();
 Star [] nightSky = new Star [500];
+ArrayList <Asteroid> asteroidField = new ArrayList <Asteroid> ();
 public void setup() 
 {
   size(500,500);
   for (int i = 0; i < 500; i++) {
   	nightSky[i] = new Star();
+  }
+  for (int i = 0; i < 10; i ++) {
+  	asteroidField.add(new Asteroid());
   }
 }
 public void draw() 
@@ -14,6 +18,10 @@ public void draw()
     bob.show ();
     for (int i = 0; i < 500; i++) {
     	nightSky[i].show();
+    }
+    for (int i = 0; i < 10; i++) {
+    	asteroidField.get(i).show();
+    	asteroidField.get(i).move();
     }
 }
 
