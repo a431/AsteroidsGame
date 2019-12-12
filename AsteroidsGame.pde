@@ -29,9 +29,9 @@ public void keyPressed() {
 	if (key == ' ') { //hyperspace
 		bob.hyperspace();
 	} else if (key == 'a') { //left
-		bob.myPointDirection -=15; 
+		bob.myPointDirection -=30; 
 	} else if (key == 'd') {//right
-		bob.myPointDirection +=15;
+		bob.myPointDirection +=30;
 	} else if (key == 'w' && bob.myDirectionX < 20 && bob.myDirectionY < 20) { //accelerate
 		bob.accelerate(.6);
 	} else if (key == 's' && bob.myDirectionX < 20 && bob.myDirectionY < 20) {
