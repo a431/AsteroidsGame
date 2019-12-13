@@ -1,5 +1,6 @@
 Spaceship bob = new Spaceship();
 Star [] nightSky = new Star [500];
+ArrayList <Bullet> magazine = new ArrayList <Bullet> ();
 ArrayList <Asteroid> asteroidField = new ArrayList <Asteroid> ();
 public void setup() 
 {
@@ -23,6 +24,10 @@ public void draw()
     	asteroidField.get(i).show();
     	asteroidField.get(i).move();
     }
+    for (int i = 0; i < magazine.size(); i++) {
+    	magazine.get(i).show();
+    	magazine.get(i).move();
+    }
 }
 
 public void keyPressed() {
@@ -36,6 +41,8 @@ public void keyPressed() {
 		bob.accelerate(.6);
 	} else if (key == 's' && bob.myDirectionX < 20 && bob.myDirectionY < 20) {
 		bob.accelerate(-.4);
+	} else if (key == 'e') {
+		magazine.add(new Bullet());
 	}
 }
 
